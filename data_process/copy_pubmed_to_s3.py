@@ -19,8 +19,8 @@ def list_s3_objects(s3_client,bucket_name, prefix=''):
 
 def copy_files_between_buckets(source_bucket, destination_bucket):
     # Create a new S3 client
-    access_key='AKIARRYBF7F2BS5L6D5Q'
-    secret_key='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'
+    access_key=''
+    secret_key=''
     s3 = boto3.client('s3', aws_access_key_id=access_key, aws_secret_access_key=secret_key)
 
     # List objects in the source bucket
