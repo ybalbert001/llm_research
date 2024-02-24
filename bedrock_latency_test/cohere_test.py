@@ -1,4 +1,4 @@
-from locust import HttpUser, task
+from locust import HttpUser, task, constant
 from authorizer import authorize
 import json
 import config as conf
@@ -11,8 +11,9 @@ input_body["input_type"] = 'search_query'
 PAYLOAD = json.dumps(input_body)
 
 class WebsiteUser(HttpUser):
-    min_wait = 1
-    max_wait = 5  # time in ms
+    # min_wait = 1
+    # max_wait = 5  # time in ms
+    wait_time = constant(2000) # time in ms
 
     @task
     def test_post(self):
