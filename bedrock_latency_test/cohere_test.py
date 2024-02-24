@@ -1,4 +1,4 @@
-from locust import HttpUser, task, constant
+from locust import HttpUser, task, constant, between
 from authorizer import authorize
 import json
 import config as conf
