@@ -12,8 +12,9 @@ PAYLOAD = json.dumps(input_body)
 
 class WebsiteUser(HttpUser):
     # min_wait = 1
-    # max_wait = 5  # time in ms
-    wait_time = constant(2000) # time in ms
+    # max_wait = 5  
+    # wait_time = constant(3)
+    wait_time = between(3.0, 5.0) # 3-5 ms wait time
 
     @task
     def test_post(self):
