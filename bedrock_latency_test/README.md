@@ -5,9 +5,9 @@ pip install -r requirements.txt
 
 
 # 设置ak/sk 以及region
-export ak='' 
-export sk=''
-export region=''
+export ak='AKIA2AIJZ3XPLX5RXB5B' 
+export sk='YgoadZFFUDCzpg356ZoKg08aoRIOubVNynY12c6o'
+export region='us-west-2'
 
-locust --host=http://localhost:8080 --locustfile=cohere_test.py
+locust -f cohere_test.py --headless --users 10 --spawn-rate 2 --run-time 5m
 ```
