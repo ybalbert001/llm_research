@@ -1,4 +1,4 @@
-locust==1.5.3
+locust==2.23.1
 boto3==1.28.70
 markupsafe==2.0.1
 Werkzeug==2.0.3
