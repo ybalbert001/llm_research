@@ -22,4 +22,4 @@ class WebsiteUser(HttpUser):
         Load Test SageMaker Endpoint (POST request)
         """
         headers = authorize(PAYLOAD)
-        response = self.client.post(conf.SAGEMAKER_ENDPOINT_URL, data=PAYLOAD, headers=headers, name='Post Request')
+        response = self.client.post(conf.SAGEMAKER_ENDPOINT_URL, data=PAYLOAD, headers=headers)
