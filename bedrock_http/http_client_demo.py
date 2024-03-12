@@ -39,12 +39,13 @@ input_body = {
             }
         ]
     }
-
+}
 
 PAYLOAD = json.dumps(input_body)
 
 headers = authorize(PAYLOAD)
 
-r = requests.post(conf.ENDPOINT_URL, data=PAYLOAD, headers=headers)
+print(headers)
+r = requests.post(conf.ENDPOINT_URL, json=PAYLOAD, headers=headers)
 
-print(r)
+print(r.text)
