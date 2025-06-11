@@ -1,6 +1,7 @@
 import json
 import random
 import boto3
+import time
 from locust import HttpUser, task, between, events
 from opensearchpy import OpenSearch, RequestsHttpConnection
 from requests_aws4auth import AWS4Auth
