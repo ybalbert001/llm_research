@@ -76,7 +76,7 @@ class OpenSearchUser(HttpUser):
             "size": 5,  # Return top 5 results
             "query": {
                 "knn": {
-                    "embedding": {
+                    "vector": {
                         "vector": embedding,
                         "k": 5
                     }
