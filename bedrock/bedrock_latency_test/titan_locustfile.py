@@ -5,7 +5,7 @@ import config as conf
 
 text= 'CT核磁是否需要预授权？'
 input_body = {}
-input_body["inputText"] = [ text[:2048] ]
+input_body["inputText"] = text[:2048]
 PAYLOAD = json.dumps(input_body)
 
 class WebsiteUser(HttpUser):
